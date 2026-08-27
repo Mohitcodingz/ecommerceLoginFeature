@@ -11,7 +11,7 @@ router.post('/register', async (req, res) => {
         if (existingUser) {
             return res.json("the user is already registered");
         }
-        const hashedPassword = bcrypt.hashSync(req.body.password, 8);
+        const hashedPassword = bcrypt.hashSync(req.body.password, 8); //
         const newData = new userData({
             name: req.body.name,
             email: req.body.email,
