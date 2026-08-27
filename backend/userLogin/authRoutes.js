@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const userData = require('./../userModel');
 const router = express.Router();
+const env = require('dotenv').config();
 router.post('/register', async (req, res) => {
     try {
         const existingUser = await userData.findOne({ email: req.body.email });
@@ -35,10 +36,9 @@ router.post('/login', async (req, res) => {
         return res.status(201).json('The Password Does not match, Try Again!')
     }
 
-    const secret_key = 'super-secret-key-ecommerceLogin-Feature';
     const payLoad = {
         id: isUserRegistered._id,
     }
-    const token = jwt.sign(payLoad, secret_key);
-    res.status(200).json({msg:'The user is Logged In Successfully', token:token})
+    const token = jwt.sign(payLoad, process.env.secret_key);
+    res.status(200).json({ msg: 'The user is Logged In Successfully', token: token })
 })
