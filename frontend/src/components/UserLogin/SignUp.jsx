@@ -1,64 +1,65 @@
+import React from 'react'
 
-export const Login = () => {
+export default function SignUp() {
     return (
-        <div className="login-page">
+        <div className="signup-page">
             <style>{`
-                .login-page {
+                .signup-page {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     min-height: 100vh;
-                    background: linear-gradient(135deg, #f4f7fb 0%, #eaf2ff 100%);
+                    background: linear-gradient(135deg, #eef5ff 0%, #f8f3ff 100%);
                     font-family: Arial, sans-serif;
                 }
 
-                .login-card {
+                .signup-card {
                     width: 100%;
-                    max-width: 420px;
+                    max-width: 460px;
                     background: #ffffff;
                     padding: 32px 28px;
                     border-radius: 16px;
-                    box-shadow: 0 12px 30px rgba(25, 59, 104, 0.12);
-                    border: 1px solid #dfe9f7;
+                    box-shadow: 0 12px 30px rgba(78, 105, 157, 0.12);
+                    border: 1px solid #e3eaf9;
                 }
 
-                .login-card h2 {
+                .signup-card h2 {
                     margin: 0 0 24px;
                     text-align: center;
-                    color: #1e3a5f;
+                    color: #1f3457;
                     font-size: 2rem;
                 }
 
-                .login-form {
+                .signup-form {
                     display: flex;
                     flex-direction: column;
                     gap: 14px;
                 }
 
-                .login-form label {
+                .signup-form label {
                     font-size: 0.95rem;
                     font-weight: 600;
-                    color: #29496d;
+                    color: #324d72;
                     display: flex;
                     flex-direction: column;
                     gap: 8px;
                 }
 
-                .login-form input {
+                .signup-form input {
                     width: 100%;
                     padding: 12px 14px;
-                    border: 1px solid #cfdcf5;
+                    border: 1px solid #d5dff5;
                     border-radius: 10px;
                     font-size: 1rem;
                     outline: none;
                     transition: border-color 0.2s ease, box-shadow 0.2s ease;
                     box-sizing: border-box;
-                    background: #f9fbff;
+                    background: #fbfcff;
                 }
 
-                .login-form input:focus {
-                    border-color: #4b79d8;
-                    box-shadow: 0 0 0 3px rgba(75, 121, 216, 0.15);
+                .signup-form input:focus {
+                    border-color: #6d7ae8;
+                    box-shadow: 0 0 0 3px rgba(109, 122, 232, 0.14);
                 }
 
                 .button-row {
@@ -84,26 +85,30 @@ export const Login = () => {
                 }
 
                 .reset-btn {
-                    background: #e9eefb;
-                    color: #244a7a;
+                    background: #edf2ff;
+                    color: #374d7a;
                 }
 
                 .submit-btn {
-                    background: linear-gradient(135deg, #4b79d8, #2d5bbd);
+                    background: linear-gradient(135deg, #6d7ae8, #5048d7);
                     color: #ffffff;
                 }
             `}</style>
 
-            <div className="login-card">
-                <h2>Login</h2>
-                <form className="login-form" action="" method="get">
+            <div className="signup-card">
+                <h2>Sign Up</h2>
+                <form className="signup-form" action="" method="get">
+                    <label>
+                        Name
+                        <input type="text" placeholder="Enter your name" />
+                    </label>
                     <label>
                         Email
                         <input type="email" placeholder="Enter your email" />
                     </label>
                     <label>
                         Password
-                        <input type="password" placeholder="Enter your password" />
+                        <input type="password" placeholder="Create a password" />
                     </label>
 
                     <div className="button-row">
