@@ -1,5 +1,5 @@
-
-export const Login = () => {
+import { Link } from 'react-router-dom'
+export default function Login() {
     return (
         <div className="login-page">
             <style>{`
@@ -111,6 +111,7 @@ export const Login = () => {
                         <button type="submit" className="submit-btn">Submit</button>
                     </div>
                 </form>
+                <p>Don't have Registered Account <Link to='SignUp'>Click here</Link></p>
             </div>
         </div>
     )
