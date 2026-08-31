@@ -9,6 +9,7 @@ export default function App() {
         <Routes>
           <Route element={<Login/>} path='/Login'/>
           <Route element={<SignUp/>} path='/SignUp'/>
+          {/* This is the control center */}
         </Routes>
       </BrowserRouter>
       {/* <Login /> */}
